@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Työpaja 2: Yksinkertainen sivu</title>
+</head>
+<style>
+	body {
+		font-family: Arial, Helvetica, sans-serif
+	}
+
+	h2 {
+		color: blue
+	}
+
+	code {
+		font-size: larger;
+	}
+</style>
+
+<script>
+    let vastaus = confirm("Oletko opiskelija?");
+    if (vastaus) {
+       // document.write("Tervetuloa opiskelija!<br>");
+        let nimi = window.prompt("Mikä on nimesi?");
+        document.write(`Tervetuloa, ${nimi}!<br>`);
+    } else {
+        document.write("Valitettavasti tämä sivu on tarkoitettu vain opiskelijoille.");
+    }
+
+    let images = [
+      "http://farm4.staticflickr.com/3691/11268502654_f28f05966c_m.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/3/3f/Fronalpstock_big.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/5/5a/Flower_jtca001.jpg"
+    ];
+
+    let randomkuva = Math.floor(Math.random() * images.length);
+    document.write("<img src='" + images[randomkuva] + "' alt='Random kuva'>");
+</script>
+
+<body>
+    <h1>Tervetuloa</h1>
+    <h2>Opiskelijalle hyödyllistä</h2>
+    <ul>
+    <li>Muista ottaa muistiinpanot mukaan.</li>
+    <li>Kokeile koodata pieniä JavaScript-esimerkkejä.</li>
+    <li>Pidä taukoja ja venyttele.</li>
+    </ul>
+</body>
+
+</html>
