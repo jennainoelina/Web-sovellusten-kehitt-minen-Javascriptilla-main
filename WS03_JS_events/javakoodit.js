@@ -47,3 +47,16 @@ otsikko1.addEventListener("click", function() {
     otsikko1.style.color = "red";
     otsikko1.innerHTML = "Bye bye mouse!";
 });
+
+const tekstialue = document.getElementById("textdata");
+const charcount = document.getElementById("charcount");
+
+tekstialue.addEventListener("focus", () => {
+    charcount.innerHTML = "Please fill in the form with proper data.<br>";
+    tekstialue.style.backgroundColor = "lightgreen";
+})
+
+tekstialue.addEventListener("keydown", () => {
+    const pituus = tekstialue.value.length + 1;
+    charcount.innerHTML = "Please fill in the form with proper data. <br> Merkkejä: " + pituus;
+});
