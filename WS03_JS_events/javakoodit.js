@@ -60,3 +60,26 @@ tekstialue.addEventListener("keydown", () => {
     const pituus = tekstialue.value.length + 1;
     charcount.innerHTML = "Please fill in the form with proper data. <br> Merkkejä: " + pituus;
 });
+
+const lomake = document.querySelector("form");
+
+lomake.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const arvo = document.getElementById("textdata").value;
+
+    if (arvo === "") {
+        alert("Kenttä ei voi olla tyhjä!");
+    } else {
+        alert("Lomake lähetetty onnistuneesti!");
+    }
+});
+
+const koordinaatit = document.getElementById("coordinates");
+
+koordinaatit.addEventListener("mousemove", (e) => {
+    console.log("X:", e.offsetX, "Y:", e.offsetY);
+    document.getElementById("coords").innerHTML =
+    `X: ${e.offsetX}, Y: ${e.offsetY}`;
+});
+
