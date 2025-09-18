@@ -10,17 +10,21 @@
     </script>
 </head>
 
+<script src="javakoodit.js" defer>
+
+</script>
+
 <body class="ws3">
     <h1>Työpaja 3: JavaScript-tapahtumat</h1>
     <hr />
     <p>Tässä harjoituksessa harjoittelemme JavaScript-tapahtumien käyttöä. Käytä luentomateriaalia rinnakkain näiden
         harjoitusten kanssa. On myös hyvä idea tallentaa kirjoittamasi koodirivit myöhempää käyttöä varten.</p>
     <hr />
-    <h2>Harjoitus 1</h2>
+    <h2 id="exercise1">Harjoitus 1</h2>
     <p>Alla näet kolme painiketta. Muokkaa lähdekoodia ja lisää näihin painikkeisiin onClick-tapahtumat.</p>
     <p>
-        <button>Napsauta minua</button>
-        <button>Näytä taulukko</button>
+        <button onClick="alert('Klikkasit minua!')">Napsauta minua</button>
+        <button onClick="showTable()">Näytä taulukko</button>
     </p>
     <div id="taulukonPaikka"></div>
     <ol>
@@ -69,7 +73,7 @@
     </table>
 
     <hr />
-    <h2>Harjoitus 2</h2>
+    <h2 onMouseover="console.log('Stepped over my mouse!')">Harjoitus 2</h2>
     <ul>
         <li>Lisää onMouseOver-tapahtuma otsikkoon "Harjoitus 2". Tapahtuman pitäisi aktivoitua, kun hiiri siirtyy
             otsikon
