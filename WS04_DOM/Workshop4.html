@@ -8,6 +8,8 @@
 	<link rel="stylesheet" href="css/styles.css" />
 </head>
 
+<script src="javakoodit.js"></script>
+
 <body>
 	<hr />
 	<h2>Tehtävä 1: Perus- DOM-muokkaus</h2>
@@ -17,8 +19,8 @@
 	</p>
 	<p>
 		<button onclick="changeHeading();">Painike 1</button>
-		<button onclick="secondButton">Painike 2</button>
-		<button onclick="">Painike 3</button>
+		<button onclick="secondButton()">Painike 2</button>
+		<button onclick="loremipsum()">Painike 3</button>
 	</p>
 
 	<ul>
@@ -36,11 +38,13 @@
 			Kolmas painike lisää korvaa allaolevan Lorem Ipsum-tekstikappaleen sisällön jollain itse valitsemallasi
 			tekstillä. Säilytä tekstin muotoilu.<br />
 			<br />
-			<strong id="lorem"><em>&quot;Lorem ipsum</em></strong><em>
-				dolor sit amet, consectetuer adipiscing elit. Sed posuere interdum
-				sem. Quisque ligula eros ullamcorper quis, lacinia quis facilisis sed
-				sapien. Mauris varius diam vitae arcu. Sed arcu lectus auctor vitae,
-				consectetuer et venenatis eget velit. &quot;<br><br></em>
+			<div id="teksti">
+				<strong id="lorem"><em>&quot;Lorem ipsum</em></strong><em>
+					dolor sit amet, consectetuer adipiscing elit. Sed posuere interdum
+					sem. Quisque ligula eros ullamcorper quis, lacinia quis facilisis sed
+					sapien. Mauris varius diam vitae arcu. Sed arcu lectus auctor vitae,
+					consectetuer et venenatis eget velit. &quot;<br><br></em>
+			</div>
 		</li>
 		<li>
 			Bonus: Miten lisäisit tekstiä Lorem Ipsum-kappaleen perään ylikirjoittamatta olemassaolevaa tekstiä?
@@ -50,7 +54,7 @@
 
 
 	<hr />
-	<h2>Tehtävä 2: Kuvat ja alasvetovalikot</h2>
+	<h2 id="tehtava2">Tehtävä 2: Kuvat ja alasvetovalikot</h2>
 	<ul>
 		<li>
 			Kirjoita JavaScript-funktio, joka suoritetaan, kun alasvetovalikon valinta
@@ -69,7 +73,7 @@
 		</li>
 	</ul>
 	<p>Valitse uusi auto listasta.</p>
-	<select name="mySelect" id="mySelect" onchange="">
+	<select name="mySelect" id="mySelect" onchange="valintaAlert()">
 		<option value="BMW">BMW</option>
 		<option value="Audi">Audi</option>
 		<option value="Mercedes">Mercedes</option>
