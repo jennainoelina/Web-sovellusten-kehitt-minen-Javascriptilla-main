@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
+<script src="javakoodit.js" defer></script>
+
 <body>
     <h1>Workshop 5: Lomakkeet ja tiedon tallentaminen Localstorageen</h1>
     <hr />
@@ -43,10 +45,10 @@
     <p data-line="12">d) Bonus: Jos jonkun kentän kohdalla tapahtuu virhe, korosta virheellinen kenttä esim. punaisella
         reunalla ja anna käyttäjälle palautetta näyttämällä ilmoitus lomakkeella syötekentän vieressä olevassa &lt;span>
         -kentässä.</p>
-    <form onsubmit="">
+    <form onsubmit="lahetys(event)">
         <div class="no-border">
             <label>Name:<br>
-                <input type="text" name="name"><span id="name"></span>
+                <input type="text" name="nimi"><span id="name"></span>
             </label>
         </div>
         <div class="no-border">
@@ -58,7 +60,7 @@
             <label>
                 Comment:<br>
             </label>
-            <textarea name="comment"></textarea><span id="comment"></span>
+            <textarea name="kommentti"></textarea><span id="comment"></span>
         </div>
         <br>
         <input type="submit" value="Send">
@@ -130,6 +132,7 @@
         b) Lisää sivun alkuun Script-tägiin koodi, joka lataa tiedot sivulle heti kun sivu ladataan.
 
         </p>
+        <button id="naytaTiedot">Näytä tallennetut tiedot</button>
         <div id="sessiondata">Session data goes here!</div>
     </div>
     <hr />
