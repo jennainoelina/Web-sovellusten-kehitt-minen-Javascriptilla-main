@@ -49,7 +49,7 @@ function kustannukset(event) {
 
     if (vuodet > 2) {
         hinta = hinta * 0.8;
-        alert("Yli 2 vuoden jäsyydestä saat 20% alennusta!");
+        alert("Yli 2 vuoden jäsenyydestä saat 20% alennusta!");
     }
 
     if (vuodet >= 5) {
